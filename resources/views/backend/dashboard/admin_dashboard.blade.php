@@ -10,9 +10,9 @@
 </head>
 <body>
 
-<h1 class="text-center">Welcome To Admin Dashboard</h1>
+<h1 class="text-center mt-5">Welcome To Admin Dashboard</h1>
 <h3 class="text-center">
-    <a href="{{ route('admin.logout') }}" class="btn btn-danger mt-3">Logout</a>
+    <a href="" class="btn btn-danger mt-3">Logout</a>
 </h3>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
