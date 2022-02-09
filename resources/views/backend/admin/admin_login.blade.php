@@ -15,7 +15,23 @@
         <div class="col-md-3"></div>
 
         <div class="col-md-6">
-            <form action="" class="mt-5" method="POST">
+            @if ($errors->any())
+                <div class="alert alert-danger mt-5">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
+            @if(Session::has('error-msg') && Session::get('error-msg') !== '')
+                <div class="alert alert-danger mt-5">
+                    {{ Session::get('error-msg') }}
+                </div>
+            @endif
+
+            <form action="{{ url('admin-login') }}" class="mt-5" method="POST">
                 @csrf
                 <div class="form-group">
                     <label for="email">Email</label>
