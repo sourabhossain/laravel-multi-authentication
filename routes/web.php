@@ -27,6 +27,7 @@ Route::post('admin-login', [AdminController::class, 'adminLogin'])->name('admin.
 
 Route::group(['middleware' => 'auth:admin'], function () {
     Route::get('/admin/dashboard', [DashboardController::class, 'adminDashboard'])->name('admin.dashboard');
+    Route::get('/admin/logout', [AdminController::class, 'adminLogout'])->name('admin.logout');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
