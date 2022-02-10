@@ -33,6 +33,7 @@
 
             <form action="{{ url('admin-login') }}" class="mt-5" method="POST">
                 @csrf
+
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" class="form-control" name="email">
