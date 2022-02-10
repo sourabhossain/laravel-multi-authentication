@@ -31,4 +31,10 @@ class AdminController extends Controller
         Session::flash('error-msg', 'Invalid Credentials');
         return redirect()->back();
     }
+
+    public function adminLogout()
+    {
+        Auth::guard('admin')->logout();
+        return redirect('login/admin');
+    }
 }
